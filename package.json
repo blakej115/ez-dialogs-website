@@ -11,6 +11,7 @@
   "dependencies": {
     "@astrojs/mdx": "^4.0.5",
     "@astrojs/tailwind": "^5.1.4",
+    "@fontsource-variable/rubik": "^5.1.1",
     "astro": "^5.1.5",
     "clsx": "^2.1.1",
     "ez-dialogs": "^1.0.0",
