@@ -2,7 +2,10 @@
 layout: ../layouts/Layout.astro
 ---
 
-# Ez Dialogs
+import MainTitle from "../components/MainTitle.astro";
+import CreatedBy from "../components/CreatedBy.astro";
+
+<MainTitle />
 
 Ez Dialogs is a lightweight library to make using the &lt;dialog&gt; element intuitive and easy.
 
@@ -45,3 +48,7 @@ const ezDialogMain = new EzDialog(
 ```html
 <button ez-dialog-trigger="main">Open</button>
 ```
+
+6. Enjoy!
+
+<CreatedBy />

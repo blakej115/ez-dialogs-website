@@ -1,7 +1,5 @@
 ---
-import Github from "../assets/github-brands-solid.svg";
-import NPM from "../assets/npm-brands-solid.svg";
-import SocialIcon from "../components/SocialIcon.astro";
+import LogoBlakeJones from "../assets/logo-blake-jones.svg";
 ---
 
 <!doctype html>
@@ -17,19 +15,6 @@ import SocialIcon from "../components/SocialIcon.astro";
     <section class="flex min-h-screen flex-col items-center justify-center p-8">
       <article class="prose w-full">
         <slot />
-        <p>
-          Created by <a href="https://blakejones.dev/" target="_blank"
-            >Blake Jones</a
-          >.
-        </p>
-        <footer class="flex w-full gap-4">
-          <SocialIcon href="https://github.com/blakej115/ez-dialogs">
-            <Github class="w-full max-w-8" />
-          </SocialIcon>
-          <SocialIcon href="https://www.npmjs.com/package/ez-dialogs">
-            <NPM class="w-full max-w-8" />
-          </SocialIcon>
-        </footer>
       </article>
     </section>
   </body>
