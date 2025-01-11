@@ -1,0 +1,17 @@
+---
+import "ez-dialogs/style.css";
+---
+
+<dialog ez-dialog="main" class="ez-dialog">
+  <button ez-dialog-close="main" class="ez-dialog-close">X</button>
+  <div ez-dialog-content="main" class="ez-dialog-content prose">
+    <h1>Dialog Example</h1>
+    <p>This is an example dialog.</p>
+  </div>
+</dialog>
+
+<script>
+  import EzDialog from "ez-dialogs";
+
+  new EzDialog(document.querySelector('[ez-dialog="main"]')!, "main");
+</script>

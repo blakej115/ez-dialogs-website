@@ -1,5 +1,6 @@
 ---
 import "@fontsource-variable/rubik";
+import ExampleDialog from "../components/ExampleDialog.astro";
 ---
 
 <!doctype html>
@@ -12,10 +13,13 @@ import "@fontsource-variable/rubik";
     <title>Ez Dialogs</title>
   </head>
   <body>
-    <section class="flex min-h-screen flex-col items-center justify-center p-8">
+    <section
+      class="flex min-h-screen flex-col items-center justify-center px-8 py-10"
+    >
       <article class="prose w-full">
         <slot />
       </article>
+      <ExampleDialog />
     </section>
   </body>
 </html>

@@ -4,10 +4,13 @@ layout: ../layouts/Layout.astro
 
 import MainTitle from "../components/MainTitle.astro";
 import CreatedBy from "../components/CreatedBy.astro";
+import ExampleButton from "../components/ExampleButton.astro";
 
 <MainTitle />
 
 Ez Dialogs is a lightweight library to make using the &lt;dialog&gt; element intuitive and easy.
+
+<ExampleButton />
 
 1. Install the package:
 
@@ -25,16 +28,13 @@ import EzDialog from "ez-dialogs";
 3. Create a new instance of EzDialog:
 
 ```js
-const ezDialogMain = new EzDialog(
-  document.querySelector("[ez-dialog]"),
-  "main",
-);
+new EzDialog(document.querySelector('[ez-dialog="main"]'), "main");
 ```
 
 4. Add the required HTML. The content used is provided only as an example, use your own content.
 
 ```html
-<dialog class="ez-dialog">
+<dialog ez-dialog="main" class="ez-dialog">
   <button ez-dialog-close="main" class="ez-dialog-close">X</button>
   <div ez-dialog-content="main" class="ez-dialog-content">
     <h1>Dialog Example</h1>
@@ -46,7 +46,7 @@ const ezDialogMain = new EzDialog(
 5. Add the correct attribute anywhere you want the dialog to be openable.
 
 ```html
-<button ez-dialog-trigger="main">Open</button>
+<button ez-dialog-trigger="main">Open Example</button>
 ```
 
 6. Enjoy!
