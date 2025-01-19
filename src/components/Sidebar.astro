@@ -1,0 +1,21 @@
+---
+import { getCollection } from "astro:content";
+import NavLink from "./NavLink.astro";
+import MainTitle from "./MainTitle.astro";
+
+const docs = await getCollection("docs");
+---
+
+<aside class="flex flex-col bg-gray-300">
+  <div class="prose p-4 !pb-0 sm:p-8">
+    <MainTitle iconOnly />
+  </div>
+  <ul>
+    <NavLink href="/">Home</NavLink>
+    {
+      docs.map(({ data: { title, slug } }) => (
+        <NavLink href={`/docs/${slug}`}>{title}</NavLink>
+      ))
+    }
+  </ul>
+</aside>

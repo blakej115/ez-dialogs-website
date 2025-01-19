@@ -1,12 +1,14 @@
 ---
 import SocialIcons from "../components/SocialIcons.astro";
+
+const { iconOnly } = Astro.props;
 ---
 
 <div
   class="mb-[0.8888889em] flex flex-wrap items-center justify-between gap-[0.8888889em] text-[2.25em]"
 >
   <h1 class="mb-0 text-[length:inherit]">
-    <span class="tracking-[-4px]">Ez</span> Dialogs
+    <span class="tracking-[-4px]">Ez</span>{!iconOnly && ` Dialogs`}
   </h1>
-  <SocialIcons />
+  {!iconOnly && <SocialIcons />}
 </div>

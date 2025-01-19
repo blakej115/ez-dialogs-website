@@ -1,6 +1,7 @@
 ---
 import "@fontsource-variable/rubik";
 import ExampleDialog from "../components/ExampleDialog.astro";
+import Sidebar from "../components/Sidebar.astro";
 ---
 
 <!doctype html>
@@ -12,14 +13,19 @@ import ExampleDialog from "../components/ExampleDialog.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Ez Dialogs</title>
   </head>
-  <body>
-    <section
-      class="flex min-h-screen flex-col items-center justify-center px-8 py-10"
+  <body class="bg-gray-200">
+    <main
+      class="flex min-h-screen flex-col items-center justify-center p-4 sm:p-8"
     >
-      <article class="prose w-full">
-        <slot />
-      </article>
+      <section
+        class="grid grid-cols-[200px_1fr] overflow-hidden rounded-md shadow-md"
+      >
+        <Sidebar />
+        <article class="prose w-full bg-white p-4 sm:p-8">
+          <slot />
+        </article>
+      </section>
       <ExampleDialog />
-    </section>
+    </main>
   </body>
 </html>
